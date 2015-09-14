@@ -1,0 +1,72 @@
+.paginDetails {
+  background: black;
+  color: white;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+}
+.error {
+  color: #df0101;
+}
+.firstLink {
+  background: black;
+  color: white;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  width: 48%;
+  margin: 0 2% 10px 0;
+}
+.nextLink {
+  background: black;
+  color: white;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  width: 48%;
+  margin: 0 0 10px 2%;
+}
+.prevLink {
+  background: black;
+  color: white;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+  float: right;
+  width: 48%;
+  margin: 0 2% 10px 0;
+}
+.lastLink {
+  background: black;
+  color: white;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+  float: right;
+  width: 48%;
+  margin: 0 0 10px 2%;
+}
+.loading {
+  position: fixed;
+  opacity: 0.1px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../static/img/ajax-loader.gif') 50% 50% no-repeat;
+}
+.form-group {
+  margin-left: 150px !important;
+}
+.paginationDiv {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#singleIssueDiv p {
+  opacity: 0;
+}

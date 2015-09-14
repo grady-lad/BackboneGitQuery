@@ -1,0 +1,29 @@
+{
+  "name": "BackboneDevTest",
+  "version": "0.0.0",
+  "description": "Test for javascript developer position",
+  "scripts": {
+    "start": "node server.js"
+  },
+  
+  "keywords": [
+    "Testy test test test"
+  ],
+  
+  "author": "Martin O'Grady <ogradymartin7@gmail.com>",
+  "license": "MIT",
+
+  "dependencies": {
+    "bole": "2.0.0",
+    "express": "4.11.0",
+    "jade": "1.9.1", 
+    "path": "0.11.14"   
+  },
+  
+  "devDependencies": {
+    "express-livereload": "0.0.24",
+    "gulp": "3.8.8",
+    "gulp-less": "3.0.3",
+    "gulp-nodemon": "^1.0.4"
+  }
+ }

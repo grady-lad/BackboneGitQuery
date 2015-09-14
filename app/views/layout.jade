@@ -1,0 +1,12 @@
+doctype
+html
+  head
+    title BackboneTest - #{title}
+    link(rel='stylesheet', href='assets/style/select2.min.css')
+    link(rel='stylesheet', type='text/css', href="assets/style/styles.css")
+    link(rel='stylesheet', type='text/css', href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+   body
+     .container
+       #switch-content
+         block content
+       script(data-main='client/require.config', src='assets/js/lib/require.js')

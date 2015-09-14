@@ -1,0 +1,53 @@
+extends ../layout
+block content
+  .app
+      #issuesDiv
+          h1.text-center Use the form Below to Query the Github Api
+          form.form-group.row
+              .col-sm-3
+                  input.form-control#userNameInput(type='text', name='username', placeholder='username')
+              .col-sm-3
+                  input#repoNameInput.form-control.repo-results(type='text', name='reponame', placeholder='repo name')
+              .col-sm-3  
+                  input#numItemsInput.form-control(type='text', name='numItems', placeholder='Number of Items')
+              .col-sm-1
+                  input#search.btn(type='submit', name='submit', value='submit')
+          #issueListView.row
+              script#issueListTemplate(type= ' text/x-handlebars')
+                  | {{#if Issues}}
+                  <table class="table issueTable">
+                  <thead>
+                  <tr>
+                  <th> Number </th>
+                  <th class="text-center"> Title </th>
+                  <th> Created_at </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  | {{#each Issues}}
+                  <tr>
+                  <td><a class="issueModel" href="#" data-id="{{id}}">{{number}}</a></td>
+                  <td class="text-center">{{title}}</a></td>
+                  <td>{{created_at}}</td>
+                  </tr>
+                  | {{/each}}
+                  </tbody>
+                  </table>
+                  | {{else}}
+                  <p> No Issues for this repo, what a luck! huh ? </p>
+                  | {{/if}}
+      #singleIssueDiv
+          script#issueTemplate(type='text/x-handlebars').
+              <div class="issueDetails">
+              <h1>Issue Details</h1>
+              <p class="issueTitle"><strong>Title:</strong> {{Issue.title}}</p>
+              <p><strong>State:</strong> {{Issue.state}}</p>
+              <p><strong>Created_at:</strong> {{Issue.created_at}}</p>
+              <p><strong>Create by:</strong> {{Issue.user.login}}</p>
+              {{#if Issue.body}}
+              <p><strong>Description:</strong> {{Issue.body}}</p>
+              {{else}}
+              <p><strong>Description:</strong> No description Specified</p>
+              {{/if}}
+              <a href="#" class="back">Return to Issues</a>
+              </div>
